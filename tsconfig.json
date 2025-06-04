@@ -1,14 +1,15 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
+    "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
+    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "bundler", // Sangat direkomendasikan untuk Next.js modern
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -18,8 +19,9 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".", // Titik (.) adalah root proyek Anda
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"] // Semua impor yang diawali @/ akan merujuk ke ./src/
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
